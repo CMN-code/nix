@@ -1,7 +1,7 @@
 name: "Sync toolchain nixpkgs pin"
 on:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 jobs:
