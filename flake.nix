@@ -1,7 +1,7 @@
 {
   description = "Toolchain definitions, currently only consisting of Rust";
   inputs = {
-  nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+  nixpkgs.url = "github:flox/nixpkgs/d407951447dcd00442e97087bf374aad70c04cea";
   flake-utils.url = "github:numtide/flake-utils";
   rust-overlay = {
     url = "github:oxalica/rust-overlay";
