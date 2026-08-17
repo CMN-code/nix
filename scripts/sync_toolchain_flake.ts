@@ -53,7 +53,7 @@ writeFileSync(
   "flake.nix",
   flakeOnMain.replace(/github:flox\/nixpkgs\/[0-9a-f]{40}/, `github:flox/nixpkgs/${rev}`),
 );
-await $`nix flake lock --update-input nixpkgs`;
+await $`nix --extra-experimental-features "nix-command flakes" flake update nixpkgs`;
 
 await $`git add flake.nix flake.lock`;
 await $`git commit -m ${`chore: sync nixpkgs to flox catalog rev ${rev}`}`;
