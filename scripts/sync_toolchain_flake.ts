@@ -51,7 +51,7 @@ await $`git merge --ff-only origin/main`;
 
 writeFileSync(
   "flake.nix",
-  flakeOnMain.replace(/github:flox\/nixpkgs\/[0-9a-f]{40}/, `github:flox/nixpkgs/${rev}`),
+  flakeOnMain.replace(/nixpkgs\.url\s*=\s*"[^"]*"/, `nixpkgs.url = "github:flox/nixpkgs/${rev}"`),
 );
 await $`nix --extra-experimental-features "nix-command flakes" flake update nixpkgs`;
 
