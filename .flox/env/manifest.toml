@@ -11,7 +11,7 @@ just.pkg-path = "just"
 bun.pkg-path = "bun"
 gh.pkg-path = "gh"
 
-rust-toolchain.flake = "github:cmn-code/nix#rust-1_96_0"
+rust-toolchain.flake = "github:cmn-code/nix#rust-1_95_0"
 # gum.pkg-path = "gum"
 # gum.version = "^0.14.5"
 
